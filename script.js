@@ -55,3 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelectorAll("img").forEach(img => {
   img.addEventListener("dragstart", (e) => e.preventDefault());
 });
+
+// Rimuove il watermark della piattaforma che ospita la gestione dei cookie
+document.addEventListener("DOMContentLoaded", function () {
+  const watermarkcookie = document.querySelector(".credit");
+  if (watermarkcookie) {
+    watermarkcookie.remove();
+  }
+});

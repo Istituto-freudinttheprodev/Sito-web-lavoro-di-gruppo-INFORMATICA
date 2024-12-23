@@ -131,7 +131,25 @@ video::-moz-download-button {
     text-align: center;
     font-size: 37px;
     color: #febd59;
-    text-decoration: none; /* Rimuove la sottolineatura */
+    text-decoration: none;
+    position: relative; /* Necessario per l'animazione con before */
+    transition: all 0.3s ease-in-out; /* Animazione generale */
+}
+
+.collegamentoallahomepage a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Partenza dal centro */
+    bottom: -5px; /* Regola la distanza dal testo */
+    width: 0;
+    height: 4px; /* Regola lo spessore della linea */
+    background-color: #febd59;
+    transform: translateX(-50%); /* Centro esatto del link */
+    transition: width 0.4s ease, background-color 0.4s ease; /* Animazione */
+}
+
+.collegamentoallahomepage a:hover::after {
+    width: 100%; /* Espandi la linea su tutta la larghezza */
 }
 
 .frasecountdownhomepage{
@@ -143,6 +161,38 @@ video::-moz-download-button {
     text-align: center;
     font-size: 37px;
     color: red;
+}
+
+.collegamentoallahomepage2{
+    text-align: center;
+    font-size: 37px;
+    display: inline;
+}
+
+.collegamentoallahomepage2 a{
+    text-align: center;
+    font-size: 37px;
+    color: #febd59;
+    display: inline;
+    text-decoration: none;
+    position: relative; /* Necessario per l'animazione con before */
+    transition: all 0.3s ease-in-out; /* Animazione generale */
+}
+
+.collegamentoallahomepage2 a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Partenza dal centro */
+    bottom: -5px; /* Regola la distanza dal testo */
+    width: 0;
+    height: 4px; /* Regola lo spessore della linea */
+    background-color: #febd59;
+    transform: translateX(-50%); /* Centro esatto del link */
+    transition: width 0.4s ease, background-color 0.4s ease; /* Animazione */
+}
+
+.collegamentoallahomepage2 a:hover::after {
+    width: 100%; /* Espandi la linea su tutta la larghezza */
 }
 
 @media (max-width:991px){

@@ -22,11 +22,11 @@
         Palette: "palette-custom",
         Mode: "banner bottom",
         Theme: "classic",
-        Message: "Questo sito utilizza i cookie per assicurarti una migliore esperienza sul nostro sito, chiudendo questo banner accetti l'utilizzo di quest'ultimi.",
-        ButtonText: "Chiudi il banner",
-        LinkText: '<a href="Privacy&Policy.html" target="_blank" title="Informativa sulla Privacy & Policy">(Informativa sulla Privacy & Policy)</a>',
+        Message: '<span class="messaggiodelbanner">Questo sito utilizza i cookie per assicurarti una migliore esperienza sul nostro sito, chiudendo questo banner accetti l\'utilizzo di quest\'ultimi</span>',
+        ButtonText: '<span class="pulsantechiusurabanner" title="Chiudi il banner">Chiudi il banner</span>',
+        LinkText: '<a href="Privacy&Policy.html" target="_blank" title="Visualizza l\'informativa sulla Privacy & Policy" class="linkbannerPrivacyePolicy">(Informativa sulla Privacy & Policy)</a>.',
         Time: "3"
-    });
+    });    
 </script>
     <header>
         <nav class="barradinavigazione">
@@ -61,7 +61,7 @@
         </nav>
     </header>
     <div id="popup" class="popup">
-        <div class="popup-content">
+        <div class="testopopup">
           <h2>ATTENZIONE!!!</h2>
           <p>
             <strong>
@@ -84,7 +84,7 @@
                 ACCESS TO AND USE OF THIS SITE IS SUBJECT TO YOUR FULL ACCEPTANCE OF THESE TERMS AND CONDITIONS.
             </strong>
         </p>
-        <button class="bottonepopup" onclick="chiudipopup()" title="Chiudi il popup">Chiudi il popup</button>
+        <button class="pulsantechiudipopup" onclick="chiudipopup()" title="Chiudi il popup">Chiudi il popup</button>
     </div>
 </div>
 
@@ -94,7 +94,7 @@
         <span>Artigiani pasticceri milanesi <br></span>
         <span>dal 2024</span>
         <p>Dopo neanche un anno di lavoro (a dir la verità neanche un mese ma vabbè), 0 generazioni meneghine di maestri pasticceri e un incalcolabile numero di dolcezze (zero) sfornate dalla storica bottega di via Ippodromo 7 a Milano, oggi la Pasticceria KiuGroove è apprezzata e riconosciuta da nessuno come eccellenza della pasticceria lombarda e un po’ più in giù (massimo fino alla rotonda di quella via che si trova in fondo a quella strada).</p>
-        <a href="#" class="pulsanteprenotailtuodolceealtro" title="Prenota il tuo dolce!">Prenota il tuo dolce!</a>
+        <a href="#Le nostre torte" class="pulsanteprenotailtuodolceealtro" title="Prenota il tuo dolce!">Prenota il tuo dolce!</a>
     </div>
 </section>
 
@@ -110,7 +110,7 @@
             <h3>La pasticceria</h3>
             <p>Un’ampia selezione di torte classiche, da forno e moderne affianca una proposta di biscotti insieme a delle delizie al cioccolato.</p>
             <p>Da buoni milanesi sappiamo fare ottimi panettoni, ma anche come soddisfare gli amanti del salato (no, non siamo una pasticceria normale).</p>
-            <a href="#" class="pulsanteprenotailtuodolceealtro" title="Scopri di più!">Scopri di più!</a>
+            <a href="#Le nostre torte" class="pulsanteprenotailtuodolceealtro" title="Scopri di più!">Scopri di più!</a>
         </div>
     </div>
 </section>
@@ -350,7 +350,7 @@ document.addEventListener("contextmenu", function(e) {
 </script>
 <script>
 // Forza lo scroll della pagina all'inizio ogni volta che viene ricaricata o quando si lascia la pagina e la si riapre dopo
-    window.onbeforeunload = function () {
+    window.onload = function () {
         window.scrollTo(0, 0);
     };
 </script>

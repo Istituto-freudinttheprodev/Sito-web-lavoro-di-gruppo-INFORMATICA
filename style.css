@@ -41,6 +41,12 @@ video::-moz-download-button {
   touch-action: manipulation; /* Imposta il comportamento del tocco */
 }
 
+.credit { /* classe del Watermark dei cookie */
+  display: none !important; /* Nasconde il Watermark in quanto non è così bello da vedere */
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
 /* Esempio di palette personalizzata per il banner dei cookie */
 .palette-custom {
   --banner-background: #febd59; /* Colore di sfondo del banner */
@@ -56,6 +62,15 @@ video::-moz-download-button {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
+  background: #febd59;
+  border-top: 3px solid beige;
+  color: beige;
+  font-family: "Montserrat", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease, border-top-color 0.3s ease; /* Transizione per il colore dello sfondo, del testo e del bordo */
+  /* Stile del banner con animazione di fade-in */
+  transition: background 0.3s ease, color 0.3s ease, border-top-color 0.3s ease; /* Transizione per il colore dello sfondo, del testo e del bordo */
+  /* Stile del banner con animazione di fade-in */
+  animation: animazionedidissolvenzadelbanner 1s ease-in-out; /* Applica il tipo indicato di animazione con durata di 1 secondo e un'uscita graduale */
 }
 
 .banner button {
@@ -65,29 +80,72 @@ video::-moz-download-button {
   cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
 }
 
-.banner a {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-}
-
-.banner a:hover {
-  text-decoration: underline;
-}
-
-.banner {
-  background: #febd59; /* Gradiente di sfondo */
-  border-top: 3px solid beige; /* Bordi del banner */
-  color: beige; /* Colore del testo */
-  font-family: "Montserrat", sans-serif;
-  transition: background 0.3s ease, color 0.3s ease, border-top-color 0.3s ease; /* Transizione per il colore dello sfondo, del testo e del bordo */
-  /* Stile del banner con animazione di fade-in */
-  animation: animazionedidissolvenzadelbanner 1s ease-out; /* Applica questo tipo di animazione con durata di 1 secondo e un'uscita graduale */
-}
-
+/* Quando il banner è in hover */
 .banner:hover {
-  background: beige; /* Gradiente di sfondo */
-  border-top: 3px solid #febd59; /* Bordi del banner */
-  color: #febd59; /* Colore del testo */
+  background: beige;
+  border-top: 3px solid #febd59;
+  color: #febd59;
+}
+
+.banner a {
+  color: beige;
+}
+
+/* Quando il banner è in hover */
+.banner:hover a {
+  color: #febd59; /* Cambia il colore del link all'interno del banner */
+}
+
+/* Stile del link del collegamento alla Privacy e Policy del banner */
+.linkbannerPrivacyePolicy {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative; /* Necessario per l'animazione con before */
+  transition: all 0.3s ease-in-out; /* Animazione generale */
+}
+
+/* Stile del link del collegamento alla Privacy e Policy del banner (quando ci si passa sopra con il cursore) */
+.linkbannerPrivacyePolicy::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Partenza dal centro */
+  bottom: -5px; /* Regola la distanza dal testo */
+  width: 0;
+  height: 4px; /* Regola lo spessore della linea */
+  background-color: #febd59;
+  transform: translateX(-50%); /* Centro esatto del link */
+  transition: width 0.4s ease, background-color 0.4s ease; /* Animazione */
+}
+
+.linkbannerPrivacyePolicy:hover::after {
+  width: 100%; /* Espandi la linea su tutta la larghezza */
+}
+
+/* Stile del messaggio del banner */
+.messaggiodelbanner {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+/* Stile del testo del pulsante presente nel banner */
+.pulsantechiusurabanner {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;  /* Dimensione del font */
+  color: #febd59;  /* Colore del testo */
+  background-color: beige;  /* Colore di sfondo del bottone */
+  padding: 10px 20px;  /* Spaziatura interna del bottone */
+  border-radius: 7px;  /* Raggio dei bordi */
+  text-align: center;  /* Centrare il testo nel bottone */
+  cursor: pointer;  /* Cambia il cursore al passaggio del mouse */
+  display: inline-block;  /* Imposta il bottone come inline-block */
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Stile del testo del pulsante presente nel banner (quando ci si passa sopra con il cursore) */
+.pulsantechiusurabanner:hover {
+  color: beige;
+  background-color: #febd59;  /* Colore di sfondo più scuro */
 }
 
 /* Definizione dell'animazione "animazionedidissolvenzadelbanner" indicata sopra */
@@ -124,7 +182,7 @@ video::-moz-download-button {
   overflow: auto;
 }
 
-.popup-content{
+.testopopup{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -137,10 +195,11 @@ video::-moz-download-button {
   font-size: 90%;
 }
 
-.bottonepopup{
+.pulsantechiudipopup{
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem; /* Imposta la dimensione del bottone */
   color: red; /* Imposta il colore del testo */
-  border-radius: 10rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
+  border-radius: 0.7rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
   padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.*/
   cursor: pointer; /* Imposta il cursore quando si va sopra il logo */
   border:.1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
@@ -380,6 +439,7 @@ header .menùdispositivimobili{
   text-decoration: none; /* Rimuove la sottolineatura */
   font-weight: 1000;
   text-align: justify;
+  outline: .1rem solid;
 }
 
 .lenostretorte{
