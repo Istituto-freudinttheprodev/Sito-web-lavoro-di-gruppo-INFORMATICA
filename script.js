@@ -52,9 +52,21 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 // Disabilita il trascinamento delle immagini in una altra scheda (per togliere la possibilità di copiarle)
-document.querySelectorAll("img").forEach(img => {
-  img.addEventListener("dragstart", (e) => e.preventDefault());
+document.addEventListener("dragstart", (event) => {
+  if (event.target.tagName === "IMG") {
+    event.preventDefault();
+  }
 });
+
+// Disabilita l'apertura del menu contestuale (tasto destro) solo sulle immagini
+document.addEventListener("contextmenu", (event) => {
+  if (event.target.tagName === "IMG") {
+    event.preventDefault();
+  }
+});
+
+// Disabilita completamente il tasto destro su tutta la pagina, non solo sulle immagini
+document.addEventListener("contextmenu", (event) => event.preventDefault());
 
 // Rimuove il watermark della piattaforma che ospita la gestione dei cookie
 document.addEventListener("DOMContentLoaded", function () {

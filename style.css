@@ -12,6 +12,12 @@ body{
 img {
   -webkit-user-drag: none; /* Per browser WebKit come Chrome e Safari */
   user-drag: none; /* Per Firefox */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  text-align: center;
+  margin: 0 auto; /* Centra l'immagine orizzontalmente */
+  max-width: 100%; /* Per evitare che sfori dal contenitore */
 }
 
 /* Nasconde il pulsante di download dal menù delle opzioni del video per i browser che lo supportano */
@@ -133,19 +139,19 @@ video::-moz-download-button {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;  /* Dimensione del font */
   color: #febd59;  /* Colore del testo */
-  background-color: beige;  /* Colore di sfondo del bottone */
-  padding: 10px 20px;  /* Spaziatura interna del bottone */
+  background-color: beige;  /* Colore di sfondo del pulsante */
+  padding: 10px 20px;  /* Spaziatura interna del pulsante */
   border-radius: 7px;  /* Raggio dei bordi */
-  text-align: center;  /* Centrare il testo nel bottone */
+  text-align: center;  /* Centrare il testo nel pulsante */
   cursor: pointer;  /* Cambia il cursore al passaggio del mouse */
-  display: inline-block;  /* Imposta il bottone come inline-block */
+  display: inline-block;  /* Imposta il pulsante come inline-block */
   transition: background 0.3s, color 0.3s;
 }
 
 /* Stile del testo del pulsante presente nel banner (quando ci si passa sopra con il cursore) */
 .pulsantechiusurabanner:hover {
   color: beige;
-  background-color: #febd59;  /* Colore di sfondo più scuro */
+  background-color: #febd59;
 }
 
 /* Definizione dell'animazione "animazionedidissolvenzadelbanner" indicata sopra */
@@ -197,14 +203,21 @@ video::-moz-download-button {
 
 .pulsantechiudipopup{
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem; /* Imposta la dimensione del bottone */
+  font-size: 1rem; /* Imposta la dimensione del pulsante */
   color: red; /* Imposta il colore del testo */
   border-radius: 0.7rem; /* Imposta il raggio del bordo del menù, più è alto più è ovale */
   padding: .5rem 1.5rem; /* Imposta il padding dell'elemento.*/
   cursor: pointer; /* Imposta il cursore quando si va sopra il logo */
-  border:.1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
+  border: .1rem solid rgba(0, 0, 0, .3); /* Imposta lo stile del bordo */
   background-color: white;
   font-size: 140%;
+  transition: background 0.3s, color 0.3s;
+}
+
+.pulsantechiudipopup:hover {
+  color: white;
+  background-color: red;
+  border: .1rem solid white;
 }
 
 .logo{
