@@ -774,6 +774,11 @@ header .menùdispositivimobili{
     color: beige;
   }
 
+  .linknonsottolineati{
+    color: black;
+    transition: background 0.2s, color 0.2s;
+  }
+
   .linknonsottolineati:hover{
     font-weight: bold; /* Imposta lo stile del testo in grassetto */
     color: beige;
