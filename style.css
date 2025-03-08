@@ -74,8 +74,6 @@ video::-moz-download-button {
   font-family: "Montserrat", sans-serif;
   transition: background 0.3s ease, color 0.3s ease, border-top-color 0.3s ease; /* Transizione per il colore dello sfondo, del testo e del bordo */
   /* Stile del banner con animazione di fade-in */
-  transition: background 0.3s ease, color 0.3s ease, border-top-color 0.3s ease; /* Transizione per il colore dello sfondo, del testo e del bordo */
-  /* Stile del banner con animazione di fade-in */
   animation: animazionedidissolvenzadelbanner 1s ease-in-out; /* Applica il tipo indicato di animazione con durata di 1 secondo e un'uscita graduale */
 }
 
@@ -169,9 +167,19 @@ video::-moz-download-button {
   font-weight: bold;
 }
 
+.contatoreprodottipreferiti:hover {
+  font-weight: bold; /* Imposta lo stile del testo in grassetto */
+  color: #febd59;
+}
+
 .contatoreprodottishoppingbag {
   color: black;
   font-weight: bold;
+}
+
+.contatoreprodottishoppingbag:hover {
+  font-weight: bold; /* Imposta lo stile del testo in grassetto */
+  color: #febd59;
 }
 
 .popup{
@@ -186,6 +194,9 @@ video::-moz-download-button {
   transition: opacity 1s ease; /* Transizione per la comparsa del contenuto */
   font-size: 1rem;
   overflow: auto;
+  transition: background 0.3s ease, color 0.3s ease, border-top-color 0.3s ease; /* Transizione per il colore dello sfondo, del testo e del bordo */
+  /* Stile del popup con animazione di fade-in */
+  animation: animazioneentratadidissolvenzadelpopup 1s ease-in-out; /* Applica il tipo indicato di animazione con durata di 1 secondo e un'uscita graduale */
 }
 
 .testopopup{
@@ -218,6 +229,15 @@ video::-moz-download-button {
   color: white;
   background-color: red;
   border: .1rem solid white;
+}
+
+@keyframes animazioneentratadidissolvenzadelpopup {
+  from { 
+      opacity: 0; /* Inizia con il popup completamente trasparente */
+  }
+  to { 
+      opacity: 1; /* Termina con il popup completamente visibile */
+  }
 }
 
 .logo{
@@ -440,7 +460,7 @@ header .menùdispositivimobili{
   margin-top: 0; /* Rimuove lo spazio superiore */
 }
 
-.pulsanteprenotailtuodolceealtro{
+.pulsanteprenotailtuodolce{
   display: inline-block;
   margin-top: 1rem;
   border-radius: 5rem;
@@ -453,6 +473,35 @@ header .menùdispositivimobili{
   font-weight: 1000;
   text-align: justify;
   outline: .1rem solid;
+  transition: background 0.3s, color 0.3s;
+}
+
+.pulsanteprenotailtuodolce:hover{
+  background-color: beige;
+  color: #febd59;
+  outline: .1rem solid black;
+}
+
+.pulsantescopridipiù{
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background-color: #febd59;
+  color: black;
+  padding:.9rem 3.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  text-decoration: none; /* Rimuove la sottolineatura */
+  font-weight: 1000;
+  text-align: justify;
+  outline: .1rem solid;
+  transition: background 0.3s, color 0.3s;
+}
+
+.pulsantescopridipiù:hover{
+  background-color: #febd59;
+  color: beige;
+  outline: .1rem solid black;
 }
 
 .lenostretorte{
@@ -506,6 +555,7 @@ header .menùdispositivimobili{
   padding: .5rem 0;
   font-size: 2rem;
   color: black;
+  transition: background 0.3s, color 0.3s;
 }
 
 .lenostretorte .contenitorelenostretorte .tortedisponibili:hover h3{
@@ -716,6 +766,12 @@ header .menùdispositivimobili{
     font-size: 2rem; /* Ingrandisce il testo del link */
     margin-bottom: 30px; /* Aggiunge spazio inferiore tra i link */
     margin-left: 7px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .elementibarranavigazione a:hover{
+    font-weight: bold; /* Imposta lo stile del testo in grassetto */
+    color: beige;
   }
 
   .linknonsottolineati:hover{
@@ -747,11 +803,23 @@ header .menùdispositivimobili{
   .contatoreprodottipreferiti {
     color: black;
     font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .contatoreprodottipreferiti:hover {
+    font-weight: bold; /* Imposta lo stile del testo in grassetto */
+    color: beige;
   }
 
   .contatoreprodottishoppingbag {
     color: black;
     font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .contatoreprodottishoppingbag:hover {
+    font-weight: bold; /* Imposta lo stile del testo in grassetto */
+    color: beige;
   }
 
   .popup{
