@@ -12,3 +12,29 @@ Link al sito web: https://istituto-freudinttheprodev.github.io/Sito-web-lavoro-d
 Ringrazio Github Pages, questo bellisimo servizio di Github, per l'hosting del sito
 
 Matteo (the Dev)
+
+
+🔥 Idee creative per migliorare il sito
+🎮 Easter Egg sul logo
+
+Dopo 3 clic sul logo, appare un messaggio segreto: “Hai trovato la torta segreta!”
+
+🍭 Effetto sonoro divertente
+
+Quando clicchi per tornare alla homepage, parte un suono tipo slurp o pop.
+
+🎂 Countdown animato con torta
+
+Invece del solo numero, mostra una torta che “si mangia” man mano che il tempo scende.
+
+🍩 Dolce del giorno random
+
+Ogni volta che si apre la pagina, appare un dolce casuale tipo “Cheesecake al limone 🍋”.
+
+🌙 Modalità notte al cioccolato
+
+Bottone per attivare il dark mode con sfondo scuro e stile “cioccolatoso”.
+
+🧁 Frase motivazionale random
+
+Mostra una frase dolce e motivazionale ogni volta che si carica la pagina.
