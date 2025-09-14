@@ -9,7 +9,7 @@ Tutti codici e i file multimediali inseriti nel sito come ad esempio foto o vide
 
 Link al sito web: https://istituto-freudinttheprodev.github.io/Sito-web-lavoro-di-gruppo-INFORMATICA/
 
-Link alla pagina dell'[errore 404 ](https://it.wikipedia.org/wiki/Errore_404) del sito web: https://istituto-freudinttheprodev.github.io/Sito-web-lavoro-di-gruppo-INFORMATICA/test
+Link alla pagina dell'[errore 404](https://it.wikipedia.org/wiki/Errore_404) del sito web: https://istituto-freudinttheprodev.github.io/Sito-web-lavoro-di-gruppo-INFORMATICA/test
 
 Ringrazio Github Pages, questo bellisimo servizio di Github, per l'hosting del sito
 
