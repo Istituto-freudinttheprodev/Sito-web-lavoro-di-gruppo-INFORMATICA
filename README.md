@@ -1,7 +1,7 @@
 # Sito web ufficiale della pasticceria Kiugroove (attività commerciale fittizia)
 
 Il sito è stato programmato da Matteo (il sottoscritto) in HTML, CSS e JavaScript.
-Tutti codici e i file multimediali inseriti nel sito come ad esempio foto o video sono inseriti nella repository.
+Tutti codici e i file multimediali inseriti nel sito come ad esempio foto o video sono presenti nella repository.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
