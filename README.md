@@ -17,6 +17,6 @@ Link al sito web: https://istituto-freudinttheprodev.github.io/Sito-web-lavoro-d
 
 Link alla pagina dell'[errore 404](https://it.wikipedia.org/wiki/Errore_404) del sito web: https://istituto-freudinttheprodev.github.io/Sito-web-lavoro-di-gruppo-INFORMATICA/test
 
-Ringrazio Github Pages, questo bellisimo servizio di Github, per l'hosting del sito
+Ringrazio Github Pages, questo bellisimo servizio di Github, per l'hosting del sito!
 
 Matteo (the Dev)
